@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h1>{{result}}</h1>
+    <div class = "section mx-auto bg-info p-3 col-lg-6">
+        {% comment %} Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunction,Age {% endcomment %}
+        <form method= "post">
+            {% csrf_token %}
+            <div class="mb-3">
+              <label for="Pregnancies" class="form-label">Pregnancies</label>
+              <input type="number" step="any" name="Pregnancies" class="form-control" id="Pregnancies" required  placeholder="number of Pregnancies">
+            </div>
+
+            <div class="mb-3">
+                <label for="Glucose" class="form-label">Glucose</label>
+                <input type="number" step="any" name="Glucose" class="form-control" id="Glucose" required  placeholder="number of Glucose">
+              </div>
+
+              <div class="mb-3">
+                <label for="BloodPressure" class="form-label">BloodPressure</label>
+                <input type="number" step="any" name="BloodPressure" class="form-control" id="BloodPressure" required  placeholder="number of BloodPressure">
+              </div>
+
+              <div class="mb-3">
+                <label for="SkinThickness" class="form-label">SkinThickness</label>
+                <input type="number" step="any" name="SkinThickness" class="form-control" id="SkinThickness" required  placeholder="number of SkinThickness">
+              </div>
+
+              <div class="mb-3">
+                <label for="Insulin" class="form-label">Insulin</label>
+                <input type="number" step="any" name="Insulin" class="form-control" id="Insulin" required  placeholder="number of Insulin">
+              </div>
+
+              <div class="mb-3">
+                <label for="BMI" class="form-label">BMI</label>
+                <input type="number" step="any" name="BMI" class="form-control" id="BMI" required  placeholder="number of BMI">
+              </div>
+
+              <div class="mb-3">
+                <label for="DiabetesPedigreeFunction" class="form-label">DiabetesPedigreeFunction</label>
+                <input type="number" step="any"  name="DiabetesPedigreeFunction" class="form-control" id="DiabetesPedigreeFunction" required  placeholder="number of DiabetesPedigreeFunction">
+              </div>
+
+              <div class="mb-3">
+                <label for="Age" class="form-label">Age</label>
+                <input type="number" step="any" name="Age" class="form-control" id="Age" required  placeholder="number of Age">
+              </div>
+
+           
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+{% endblock content %}
+    
